@@ -16,6 +16,6 @@ class ViewController: UIViewController {
     }
     
 // test test
-// hellaw hellaw
+// hellaw hellaw bandung
 }
 
