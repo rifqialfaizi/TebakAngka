@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		076F5B71248DED61003042B4 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076F5B70248DED61003042B4 /* Alert.swift */; };
+		0774C6CA248DB7650050349E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0774C6C8248DB7650050349E /* HomeViewController.swift */; };
+		0774C6CB248DB7650050349E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0774C6C9248DB7650050349E /* HomeViewController.xib */; };
+		0774C6CD248DBF4C0050349E /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0774C6CC248DBF4C0050349E /* PlayViewController.swift */; };
 		07CE0364248A221F00833F6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CE0363248A221F00833F6D /* AppDelegate.swift */; };
 		07CE0366248A221F00833F6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CE0365248A221F00833F6D /* SceneDelegate.swift */; };
 		07CE0368248A221F00833F6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CE0367248A221F00833F6D /* ViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		076F5B70248DED61003042B4 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		0774C6C8248DB7650050349E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0774C6C9248DB7650050349E /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		0774C6CC248DBF4C0050349E /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		07CE0360248A221F00833F6D /* TebakAngka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TebakAngka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CE0363248A221F00833F6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07CE0365248A221F00833F6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +71,10 @@
 				07CE036C248A222200833F6D /* Assets.xcassets */,
 				07CE036E248A222200833F6D /* LaunchScreen.storyboard */,
 				07CE0371248A222200833F6D /* Info.plist */,
+				0774C6C8248DB7650050349E /* HomeViewController.swift */,
+				0774C6C9248DB7650050349E /* HomeViewController.xib */,
+				0774C6CC248DBF4C0050349E /* PlayViewController.swift */,
+				076F5B70248DED61003042B4 /* Alert.swift */,
 			);
 			path = TebakAngka;
 			sourceTree = "<group>";
@@ -128,6 +140,7 @@
 				07CE0370248A222200833F6D /* LaunchScreen.storyboard in Resources */,
 				07CE036D248A222200833F6D /* Assets.xcassets in Resources */,
 				07CE036B248A221F00833F6D /* Main.storyboard in Resources */,
+				0774C6CB248DB7650050349E /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076F5B71248DED61003042B4 /* Alert.swift in Sources */,
 				07CE0368248A221F00833F6D /* ViewController.swift in Sources */,
+				0774C6CD248DBF4C0050349E /* PlayViewController.swift in Sources */,
 				07CE0364248A221F00833F6D /* AppDelegate.swift in Sources */,
 				07CE0366248A221F00833F6D /* SceneDelegate.swift in Sources */,
+				0774C6CA248DB7650050349E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,24 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6WL-w6-HTE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tebak Angka-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="TebakAngka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9a-fx-Bcj">
+                                <rect key="frame" x="155" y="412" width="104" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Play!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N9r-Yn-Yg5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tebak Angka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRQ-Th-tdh">
+                                <rect key="frame" x="83.5" y="188" width="247" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IRQ-Th-tdh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="2Gj-g5-c34"/>
+                            <constraint firstItem="IRQ-Th-tdh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B0b-ZM-sem"/>
+                            <constraint firstItem="L9a-fx-Bcj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CJS-Ub-GZ2"/>
+                            <constraint firstItem="L9a-fx-Bcj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FB2-TX-pVO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Tebak Angka" id="4w0-Ar-21L"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1023.1884057971015" y="113.83928571428571"/>
+        </scene>
+        <!--Play View Controller-->
+        <scene sceneID="NJA-3t-X8D">
+            <objects>
+                <viewController storyboardIdentifier="PlayViewController" id="L1m-ay-MBJ" customClass="PlayViewController" customModule="TebakAngka" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zWf-ye-08h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Masukkan Angka" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vxi-Hw-cYn">
+                                <rect key="frame" x="107" y="431" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="uLf-Cx-ePq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="textField:" destination="S9p-Q1-SZJ" eventType="editingDidEnd" id="PFv-L2-0OA"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nb-GC-St2">
+                                <rect key="frame" x="150" y="645" width="114" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Tebak!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tebakButtonDidTap:" destination="L1m-ay-MBJ" eventType="touchUpInside" id="Kmg-2p-nhY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tebak Angka Yang Tersembunyi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2j-TQ-Upk">
+                                <rect key="frame" x="86" y="304" width="242" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="cyQ-3z-A2Z"/>
+                                    <constraint firstAttribute="height" constant="77" id="fuU-Os-vrc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vxi-Hw-cYn" firstAttribute="centerX" secondItem="zWf-ye-08h" secondAttribute="centerX" id="3MI-28-Lmx"/>
+                            <constraint firstItem="P2j-TQ-Upk" firstAttribute="centerX" secondItem="zWf-ye-08h" secondAttribute="centerX" id="8bT-A7-ehx"/>
+                            <constraint firstItem="3nb-GC-St2" firstAttribute="top" secondItem="Vxi-Hw-cYn" secondAttribute="bottom" constant="180" id="DTM-bl-Any"/>
+                            <constraint firstItem="Vxi-Hw-cYn" firstAttribute="top" secondItem="P2j-TQ-Upk" secondAttribute="bottom" constant="50" id="QiQ-e8-2cu"/>
+                            <constraint firstItem="Vxi-Hw-cYn" firstAttribute="centerY" secondItem="zWf-ye-08h" secondAttribute="centerY" id="dIt-mW-s2l"/>
+                            <constraint firstItem="3nb-GC-St2" firstAttribute="centerX" secondItem="zWf-ye-08h" secondAttribute="centerX" id="eEg-ra-mZz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="81q-AI-lyu"/>
+                    </view>
+                    <connections>
+                        <outlet property="angkaYangDiTebak" destination="Vxi-Hw-cYn" id="ylo-yg-FcC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dsA-GV-SJn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="S9p-Q1-SZJ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1821.7391304347827" y="113.83928571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JVu-Bl-Ygj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6WL-w6-HTE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dvj-cy-lNV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XHE-jf-QWz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CJt-iX-li0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.04347826086958" y="113.83928571428571"/>
         </scene>
     </scenes>
 </document>
