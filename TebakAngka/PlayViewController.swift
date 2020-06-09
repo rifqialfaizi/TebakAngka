@@ -45,8 +45,13 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
         // Text Field
         let angkaTebakan = Int(angkaYangDiTebak.text!)
         
+        // Alert score terlalu kecil
+        if score == 5  {
+            showAlert(title: "WOII PEAAA YANG BENER DONG!" , message: "canda hehe")
+        }
+        
         // Angka terlalu kecil
-        if angkaTebakan! < (angka-5)  {
+        if angkaTebakan! < (angka-3)  {
             print("Angka terlalu kecil")
              showAlert(title: "Angka kamu terlalu kecil!" , message: "Tetap Semangat!")
             
@@ -54,7 +59,7 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
             scoreLabel.text = String(score)
         
   
-        } else if angkaTebakan! > (angka-5) && angkaTebakan! < angka {
+        } else if angkaTebakan! >= (angka-3) && angkaTebakan! < angka {
         print("Angka kamu terlalu kecil, tetapi hampir mendekati")
             showAlert(title: "Angka kamu terlalu kecil, tetapi hampir mendekati!" , message: "Tetap Semangat!")
             score -= 1
@@ -63,18 +68,19 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
         
         
         // Angka terlalu besar
-        if angkaTebakan! > (angka+5) {
+        if angkaTebakan! > (angka+3) {
         print("Angka kamu terlalu besar")
             showAlert(title: "Angka kamu terlalu besar!" , message: "Tetap Semangat!")
             score -= 1
             scoreLabel.text = String(score)
             
-        } else if angkaTebakan! > angka && angkaTebakan! < (angka+5) {
+        } else if angkaTebakan! > angka && angkaTebakan! <= (angka+3) {
         print("Angka kamu terlalu besar, tetapi hampir mendekati")
             showAlert(title: "Angka kamu terlalu besar, tetapi hampir mendekati!" , message: "Tetap Semangat!")
             score -= 1
             scoreLabel.text = String(score)
         }
+        
         
         // Angka Benar
         if angkaTebakan! == angka {
@@ -85,6 +91,7 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
             scoreLabel.text = String(score)
             
             // TODO: - ReGenerate Random Number
+            
             // try to use generateRandomNumber() -> failed
             // try to use method in viewDidLoad() -> failed
             // try to reWrite func -> failed
@@ -95,6 +102,11 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
             self.navigationController?.pushViewController(playViewController, animated: false)
             
             }
+        
+        
+        
+        
+           
         }
     
     func generateRandomNumber() -> Int {
