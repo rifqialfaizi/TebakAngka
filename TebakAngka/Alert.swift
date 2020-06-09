@@ -24,10 +24,12 @@ extension UIViewController {
     func showAlert2(title: String, message: String) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Main Lagi", style: .destructive , handler: nil)
+        let action = UIAlertAction(title: "Main Lagi", style: .default , handler: nil)
         alert.addAction(action)
         DispatchQueue.main.async {
             self.present(alert, animated: true, completion: nil)
         }
+        
+       
     }
 }
