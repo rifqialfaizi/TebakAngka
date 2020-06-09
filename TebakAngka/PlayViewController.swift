@@ -102,12 +102,7 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
             self.navigationController?.pushViewController(playViewController, animated: false)
             
             }
-        
-        
-        
-        
-           
-        }
+}
     
     func generateRandomNumber() -> Int {
         let angkaRandom = Int.random(in: 1...10)
