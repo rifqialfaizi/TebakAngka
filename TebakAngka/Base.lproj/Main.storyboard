@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6WL-w6-HTE">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="TebakAngka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9a-fx-Bcj">
-                                <rect key="frame" x="155" y="412" width="104" height="72"/>
+                                <rect key="frame" x="135.66666666666666" y="370" width="104" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Play!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tebak Angka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRQ-Th-tdh">
-                                <rect key="frame" x="83.5" y="188" width="247" height="54"/>
+                                <rect key="frame" x="64" y="188" width="247" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -52,22 +52,11 @@
             <objects>
                 <viewController storyboardIdentifier="PlayViewController" id="L1m-ay-MBJ" customClass="PlayViewController" customModule="TebakAngka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zWf-ye-08h">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Masukkan Angka" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vxi-Hw-cYn">
-                                <rect key="frame" x="107" y="431" width="200" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="uLf-Cx-ePq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="textField:" destination="S9p-Q1-SZJ" eventType="editingDidEnd" id="PFv-L2-0OA"/>
-                                </connections>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nb-GC-St2">
-                                <rect key="frame" x="150" y="645" width="114" height="60"/>
+                                <rect key="frame" x="130.66666666666666" y="576" width="114" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Tebak!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -76,49 +65,81 @@
                                     <action selector="tebakButtonDidTap:" destination="L1m-ay-MBJ" eventType="touchUpInside" id="Kmg-2p-nhY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tebak Angka Yang Tersembunyi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2j-TQ-Upk">
-                                <rect key="frame" x="86" y="304" width="242" height="77"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="242" id="cyQ-3z-A2Z"/>
-                                    <constraint firstAttribute="height" constant="77" id="fuU-Os-vrc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0sh-al-DIX">
-                                <rect key="frame" x="170" y="124" width="74.5" height="96"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9jB-YW-GZv">
+                                <rect key="frame" x="66.666666666666686" y="94" width="242" height="318"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sku-4Q-zYy">
-                                        <rect key="frame" x="0.0" y="0.0" width="74.5" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUQ-RL-OTL">
-                                        <rect key="frame" x="21.5" y="36" width="31" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="n23-5A-rXd">
+                                        <rect key="frame" x="92.333333333333329" y="0.0" width="56.999999999999986" height="96"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gW7-B4-9iM">
+                                                <rect key="frame" x="0.0" y="0.0" width="57" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQv-Jc-2F8">
+                                                <rect key="frame" x="21.666666666666657" y="60" width="14" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0sh-al-DIX">
+                                        <rect key="frame" x="83.666666666666657" y="111" width="74.666666666666657" height="96"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sku-4Q-zYy">
+                                                <rect key="frame" x="0.0" y="0.0" width="74.666666666666671" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUQ-RL-OTL">
+                                                <rect key="frame" x="22" y="36" width="30.666666666666671" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tebak Angka Yang Tersembunyi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2j-TQ-Upk">
+                                        <rect key="frame" x="0.0" y="222" width="242" height="96"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="242" id="cyQ-3z-A2Z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Masukkan Angka" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vxi-Hw-cYn">
+                                <rect key="frame" x="87.666666666666686" y="442" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="uLf-Cx-ePq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="textField:" destination="S9p-Q1-SZJ" eventType="editingDidEnd" id="PFv-L2-0OA"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Vxi-Hw-cYn" firstAttribute="centerX" secondItem="zWf-ye-08h" secondAttribute="centerX" id="3MI-28-Lmx"/>
-                            <constraint firstItem="P2j-TQ-Upk" firstAttribute="centerX" secondItem="zWf-ye-08h" secondAttribute="centerX" id="8bT-A7-ehx"/>
-                            <constraint firstItem="3nb-GC-St2" firstAttribute="top" secondItem="Vxi-Hw-cYn" secondAttribute="bottom" constant="180" id="DTM-bl-Any"/>
-                            <constraint firstItem="Vxi-Hw-cYn" firstAttribute="top" secondItem="P2j-TQ-Upk" secondAttribute="bottom" constant="50" id="QiQ-e8-2cu"/>
-                            <constraint firstItem="Vxi-Hw-cYn" firstAttribute="centerY" secondItem="zWf-ye-08h" secondAttribute="centerY" id="dIt-mW-s2l"/>
-                            <constraint firstItem="3nb-GC-St2" firstAttribute="centerX" secondItem="zWf-ye-08h" secondAttribute="centerX" id="eEg-ra-mZz"/>
-                            <constraint firstItem="0sh-al-DIX" firstAttribute="top" secondItem="81q-AI-lyu" secondAttribute="top" constant="80" id="h3y-j3-Sbg"/>
-                            <constraint firstItem="0sh-al-DIX" firstAttribute="centerX" secondItem="zWf-ye-08h" secondAttribute="centerX" id="iPn-zw-A6z"/>
+                            <constraint firstItem="3nb-GC-St2" firstAttribute="centerX" secondItem="zWf-ye-08h" secondAttribute="centerX" id="6KS-UW-wz0"/>
+                            <constraint firstItem="Vxi-Hw-cYn" firstAttribute="centerX" secondItem="zWf-ye-08h" secondAttribute="centerX" id="XLB-3e-nxt"/>
+                            <constraint firstItem="Vxi-Hw-cYn" firstAttribute="top" secondItem="9jB-YW-GZv" secondAttribute="bottom" constant="30" id="rEd-1F-jCF"/>
+                            <constraint firstItem="9jB-YW-GZv" firstAttribute="top" secondItem="81q-AI-lyu" secondAttribute="top" constant="50" id="rGT-4s-bVG"/>
+                            <constraint firstItem="3nb-GC-St2" firstAttribute="top" secondItem="Vxi-Hw-cYn" secondAttribute="bottom" constant="100" id="s5a-A5-vE8"/>
+                            <constraint firstItem="9jB-YW-GZv" firstAttribute="centerX" secondItem="zWf-ye-08h" secondAttribute="centerX" id="tuv-pz-7bV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="81q-AI-lyu"/>
                     </view>
                     <connections>
                         <outlet property="angkaYangDiTebak" destination="Vxi-Hw-cYn" id="ylo-yg-FcC"/>
+                        <outlet property="levelLabel" destination="dQv-Jc-2F8" id="VmS-aa-ERh"/>
+                        <outlet property="levelTextLabel" destination="gW7-B4-9iM" id="VSH-NS-j0q"/>
                         <outlet property="scoreLabel" destination="cUQ-RL-OTL" id="q05-Br-b8i"/>
                         <outlet property="scoreTextLabel" destination="sku-4Q-zYy" id="PHp-te-LKn"/>
                     </connections>
@@ -134,7 +155,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6WL-w6-HTE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dvj-cy-lNV">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
