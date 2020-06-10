@@ -58,12 +58,15 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
             score -= 1
             scoreLabel.text = String(score)
         
+            // Reset textField
+            angkaYangDiTebak.text = ""
   
         } else if angkaTebakan! >= (angka-3) && angkaTebakan! < angka {
         print("Angka kamu terlalu kecil, tetapi hampir mendekati")
             showAlert(title: "Angka kamu terlalu kecil, tetapi hampir mendekati!" , message: "Tetap Semangat!")
             score -= 1
             scoreLabel.text = String(score)
+            angkaYangDiTebak.text = ""
         }
         
         
@@ -73,12 +76,14 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
             showAlert(title: "Angka kamu terlalu besar!" , message: "Tetap Semangat!")
             score -= 1
             scoreLabel.text = String(score)
+            angkaYangDiTebak.text = ""
             
         } else if angkaTebakan! > angka && angkaTebakan! <= (angka+3) {
         print("Angka kamu terlalu besar, tetapi hampir mendekati")
             showAlert(title: "Angka kamu terlalu besar, tetapi hampir mendekati!" , message: "Tetap Semangat!")
             score -= 1
             scoreLabel.text = String(score)
+            angkaYangDiTebak.text = ""
         }
         
         
