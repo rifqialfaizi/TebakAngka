@@ -91,16 +91,13 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
             scoreLabel.text = String(score)
             
             // TODO: - ReGenerate Random Number
-            
-            // try to use generateRandomNumber() -> failed
-            // try to use method in viewDidLoad() -> failed
-            // try to reWrite func -> failed
-            
-            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            
-            let playViewController = mainStoryboard.instantiateViewController(identifier: "HomeViewController")
-            self.navigationController?.pushViewController(playViewController, animated: false)
-            
+
+            let alert = UIAlertController(title: "Bener jawabannya", message: "Mantul bgt cuy", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+                self.navigationController?.popViewController(animated: true)
+            }
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
             }
 }
     
@@ -110,5 +107,5 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
-
+// cek 1 2 3
 
