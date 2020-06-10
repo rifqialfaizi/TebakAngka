@@ -15,11 +15,11 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var levelTextLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
-    
+    @IBOutlet weak var rangeNumberLabel: UILabel!
     
     var score = 10
     var level = 0
-    
+    var rangeNumber = String("1 - 10")
     
     lazy var level1: Int = generateRandomNumber1()
     lazy var level2: Int = generateRandomNumber2()
@@ -27,13 +27,14 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
     lazy var level4: Int = generateRandomNumber4()
     lazy var level5: Int = generateRandomNumber5()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Set agar membuat nomor random saat masuk view saja, dan tidak me random angka di setiap tap button
         
         _ = level1
-        
+        rangeNumberLabel.text = String(rangeNumber)
 //        level += 1
 //        levelLabel.text = String(level)
         
@@ -52,10 +53,13 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
     @IBAction func tebakButtonDidTap(_ sender: Any) {
        
         // Angka yang harus di tebak
-        
         var angka = level1
         print(angka)
         
+        // First Level
+        var level = 1
+            levelLabel.text = String(level)
+              
         // Text Field
         let angkaTebakan = Int(angkaYangDiTebak.text!)
         
@@ -115,6 +119,9 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
             
             level += 1
             levelLabel.text = String(level)
+            
+            var rangeNumber = String("1 - 10")
+            rangeNumberLabel.text = String(rangeNumber)
             
             // TODO: - ReGenerate Random Number
             /*
