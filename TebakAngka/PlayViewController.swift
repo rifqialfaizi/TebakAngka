@@ -18,8 +18,12 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var rangeNumberLabel: UILabel!
     
     var score = 10
-    var level = 0
+    var level = 1
     var rangeNumber = String("1 - 10")
+    var numberInRangeFrom = 1
+    var numberInRangeUntil = 10
+    
+
     
     lazy var level1: Int = generateRandomNumber1()
     lazy var level2: Int = generateRandomNumber2()
@@ -35,8 +39,7 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
         
         _ = level1
         rangeNumberLabel.text = String(rangeNumber)
-//        level += 1
-//        levelLabel.text = String(level)
+        
         
         // Hide keyboard when tapped outside keyboard
         self.angkaYangDiTebak.delegate = self
@@ -53,11 +56,10 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
     @IBAction func tebakButtonDidTap(_ sender: Any) {
        
         // Angka yang harus di tebak
-        var angka = level1
+        let angka = level1
         print(angka)
         
         // First Level
-        var level = 1
             levelLabel.text = String(level)
               
         // Text Field
@@ -120,18 +122,14 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
             level += 1
             levelLabel.text = String(level)
             
-            var rangeNumber = String("1 - 10")
-            rangeNumberLabel.text = String(rangeNumber)
+                // range number label in every level
+                numberInRangeFrom += 10
+                numberInRangeUntil += 10
             
-            // TODO: - ReGenerate Random Number
-            /*
-            let alert = UIAlertController(title: "Bener jawabannya", message: "Mantul bgt cuy", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
-                self.navigationController?.popViewController(animated: true)
-            }
-            alert.addAction(okAction)
-            self.present(alert, animated: true, completion: nil)
-            */
+                let rangeNumber = String("\(numberInRangeFrom) - \(numberInRangeUntil)")
+            
+                rangeNumberLabel.text = String(rangeNumber)
+            
             
             // generate new random number
             level1 = level2
@@ -151,6 +149,19 @@ class PlayViewController: UIViewController, UITextFieldDelegate {
             scoreLabel.text = String(score)
             
             }
+        
+        // Win Condition
+        if level > 5 {
+            
+            let alert = UIAlertController(title: "GILA MANTUL", message: "KAMU PALING HEBAT POKOKNYA GA ADA YANG LAIN \n Score kamu \("7")", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Main Lagi", style: .default) { _ in
+                self.navigationController?.popViewController(animated: true)
+            }
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+        
 }
     
     func generateRandomNumber1() -> Int {
